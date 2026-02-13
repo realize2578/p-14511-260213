@@ -8,9 +8,14 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(length = 100, nullable = false)
+    private String title;
+
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
 
-    @Column(length = 100, nullable = false)
-    private String title;
+    public Post(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
