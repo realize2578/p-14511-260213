@@ -27,6 +27,8 @@ public class BaseInitData {
 
 
             postRepository.save(post1);
+
+            postRepository.findById(1);
         };
     }
 }

@@ -1,6 +1,14 @@
+server:
+  port: 8070
+
 spring:
   application:
     name: back11
+  output:
+    ansi:
+      enabled: always
+
+
   datasource:
     url: jdbc:h2:./db_dev;MODE=MySQL
     username: sa
@@ -16,5 +24,8 @@ spring:
       ddl-auto: create
     show-sql: true
 
-server:
-  port: 8070
+logging:
+  level:
+    org.hibernate.orm.jdbc.bind: TRACE
+    org.hibernate.orm.jdbc.extract: TRACE
+
