@@ -23,8 +23,6 @@ public class TestInitData {
     ApplicationRunner testInitDataRunner(){
         return args -> {
             work1();
-            work2();
-            work3();
         };
     }
     @Transactional

@@ -1,6 +1,6 @@
 package com.back.domain.post.entity;
 
-import com.back.global.initData.baseEntity.BaseEntity;
+import com.back.global.entity.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import lombok.Getter;

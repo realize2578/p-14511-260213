@@ -1,4 +1,4 @@
-package com.back.global.initData.baseEntity;
+package com.back.global.entity;
 
 
 import jakarta.persistence.*;
