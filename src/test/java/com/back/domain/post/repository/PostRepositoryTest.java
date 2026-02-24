@@ -4,20 +4,20 @@ import com.back.domain.post.entity.Post;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Rollback;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
+@Transactional
+@ActiveProfiles("test")
 public class PostRepositoryTest {
 
     @Autowired
     private PostRepository postRepository;
 
     @Test
-    @Transactional
-    @Rollback
     void t1() {
         Post post = postRepository.findById(2).get();
 
@@ -27,8 +27,6 @@ public class PostRepositoryTest {
     }
 
     @Test
-    @Transactional
-    @Rollback
     void t2() {
 
         Post post = new Post("제목3", "내용3");
@@ -42,8 +40,6 @@ public class PostRepositoryTest {
 
 
     @Test
-    @Transactional
-    @Rollback
     void t3() {
         long cnt = postRepository.count();
         assertThat(cnt).isEqualTo(2);

@@ -1,0 +1,3 @@
+spring:
+  datasuorce:
+    url: jdbc:h2:mem:db_dev;MODE=MySQL
