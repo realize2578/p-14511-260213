@@ -1,4 +1,4 @@
-package com.back.global;
+package com.back.global.initData;
 
 import com.back.domain.post.entity.Post;
 import com.back.domain.post.service.PostService;
@@ -24,7 +24,7 @@ public class BaseInitData {
     private final PostService postService;
 
     @Bean
-    ApplicationRunner initDataRunner(){
+    ApplicationRunner baseInitDataRunner(){
         return args -> {
             self.work1();
             self.work2();
